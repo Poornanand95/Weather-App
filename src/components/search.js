@@ -68,13 +68,17 @@ const Search = () => {
                       type: 'bar',
                       x: ['Actual Temp', 'Min Temp', 'Max Temp'],
                       y: [
-                        data.getCityByName.weather.temperature.actual,
-                        data.getCityByName.weather.temperature.min,
-                        data.getCityByName.weather.temperature.max,
+                        data.getCityByName.weather.temperature.actual - 273,
+                        data.getCityByName.weather.temperature.min - 273,
+                        data.getCityByName.weather.temperature.max - 273,
                       ],
                     },
                   ]}
-                  layout={{ width: 420, height: 340, title: 'Temperature(F)' }}
+                  layout={{
+                    width: 420,
+                    height: 340,
+                    title: 'Temperature(F)',
+                  }}
                 />
                 <Plot
                   className='chart-humidity'
