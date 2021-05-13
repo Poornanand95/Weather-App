@@ -77,7 +77,7 @@ const Search = () => {
                   layout={{
                     width: 420,
                     height: 340,
-                    title: 'Temperature(F)',
+                    title: 'Temperature(Celsius)',
                   }}
                 />
                 <Plot
