@@ -50,7 +50,11 @@ const Search = () => {
               <h1 className='city-name'> {data.getCityByName.name} </h1>
               <h4 className='city-temp'>
                 {' '}
-                Temp: {data.getCityByName.weather.temperature.actual} F
+                Temp:{' '}
+                {(data.getCityByName.weather.temperature.actual - 273).toFixed(
+                  2
+                )}{' '}
+                °C
               </h4>
               <div className='wind-speed'>
                 <p className='city-description'>
